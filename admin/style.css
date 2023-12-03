@@ -1,0 +1,28 @@
+body {
+  background-image: url("/gambar/bg.jpg");
+  background-size: cover;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.navbarAdmin {
+  width: 100%;
+}
+
+.tablePelanggan {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonAdmin {
+  text-align: center;
+  width: 100%;
+}
+
+.nav {
+  width: auto;
+  height: auto;
+}

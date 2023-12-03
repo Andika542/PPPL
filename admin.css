@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin : 0;
+}
+
+.bg-custom1 {
+    background-color: #FFC1CF;
+}
+/* Contoh warna 1 */
+
+.bg-custom2 {
+    background-color: #73BEB7;
+}
+/* Contoh warna 2 */
+
+.bg-background {
+    background-image: url('Home/Background.png');
+    /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+    background-size: cover;
+    /* Sesuaikan dengan kebutuhan Anda */
+    background-repeat: no-repeat;
+    /* Sesuaikan dengan kebutuhan Anda */
+}
+.form-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-label {
+    flex: 1;
+    margin-right: 10px; /* Sesuaikan margin sesuai kebutuhan */
+  }
+  
+  .input-container {
+    flex: 2;
+  }
+  table {
+    border: 1px solid;
+  }
+  

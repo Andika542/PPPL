@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- CATATAN
+    1. PENAMAAN FILE HOMEPAGE (HALAMAN UTAMA) HARUS "INDEX.HTML"
+    2. JANGAN TARO CODE JS ATAU HTML DI FILE css
+    3. SELAIN HALAMAN HOMEPAGE LU BISA BEBAS NAMAIN SEPERTI : "contact.html, about.html DLL" -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- UNTUK OMAN DAN ADIB PENAMAAN CSS DIBAWAH INI HARUS SAMA KAYAK FILE CSS YG LU PUNYA  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- UNTUK OMAN DAN ADIB PENAMAAN CSS DIBAWAH INI HARUS SAMA KAYAK FILE CSS YG LU PUNYA karna kalau namanya beda nanti file css nya ga kepanggil  -->
+
+    <style>
+        .bg-custom1 {
+            background-color: #FFC1CF;
+        }
+        /* Contoh warna 1 */
+        
+        .bg-custom2 {
+            background-color: #73BEB7;
+        }
+        /* Contoh warna 2 */
+        
+        .bg-background {
+            background-image: url('Home/Background.png');
+            /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+            background-size: cover;
+            /* Sesuaikan dengan kebutuhan Anda */
+            background-repeat: no-repeat;
+            /* Sesuaikan dengan kebutuhan Anda */
+        }
+        
+        .bg-backgroundj {
+            background-image: url('Jasa/Background.png');
+            /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+            background-size: cover;
+            /* Sesuaikan dengan kebutuhan Anda */
+            background-repeat: no-repeat;
+            /* Sesuaikan dengan kebutuhan Anda */
+        }
+        /* Tambahkan warna-warna lain sesuai kebutuhan */
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-custom1 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Logo/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Rina Salon
+            </a>
+
+            <nav id="navbar-example2" class="navbar bg-custom1 px-3 mb-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading1" style="border-right: 2px;
+                        border-color: black;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading2">Jasa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading4">Review</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <!-- Home -->
+    <div class="inner-container-home" id="scrollspyHeading1">
+        <div class="image-home">
+            <img src="Home/Gambar.png" width="80%">
+        </div>
+        <div class="home-deskripsi">
+            <h1 style="text-align:left; font-family:Playfair Display SC"><b><i>Care Of 
+                <br>Your Hair</i></b></h1>
+              <br>
+              <h3 style="text-align: justify; font-family:'Playfair Display'">Rina Salon adalah destinasi salon kecantikan yang menggabungkan kenyamanan, dan profesionalisme untuk memberikan pengalaman yang tak terlupakan kepada setiap pelanggan. </h3>  
+        </div>
+    </div>
+
+    <!-- Jasa -->
+    <div class="container-jasa" id="scrollspyHeading2">
+        <div id="carousel-container">
+            <p style="color: white; font-size: 70px; text-align: center; padding-bottom: 50px;margin-bottom: 10px;">Jasa</p>
+            <div id="carousel">
+                <div class="carousel-slide" style="width: 30%; height: 550px; background-image: url('Jasa/BleachHighlight.jpg'); background-color: black; border-radius: 300px 300px 0px 0px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white;">Bleach, Highlight</p>
+                </div>
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Jasa/Blowbiasa.jpg'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white;">Blow</p>
+                </div>
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Jasa/Catwarnahitam.jpg'); border-radius: 300px 300px 0px 0px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white;">Cat Warna</p>
+                </div>
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Jasa/Gunting\ +\ Cuci.png'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white;">Gunting + Cuci</p>
+                </div>
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Jasa/Nail\ Polish.jpg'); border-radius: 300px 300px 0px 0px ; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white;">Nail Polish</p>
+                </div>
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Jasa/Smoothing.jpg'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white;">Smoothing</p>
+                </div>
+            </div>
+            <div id="prev"><span></span></div>
+            <div id="next"><span></span></div>
+        </div>
+    </div>
+
+    <h4 id="scrollspyHeading3">Booking</h4>
+    <p>hal3</p>
+    <!-- review -->
+    <h4 id="scrollspyHeading4">Review</h4>
+    <div class="container-fluid bg-background">
+        <div class="row align-items-center">
+          <div class="col-4">
+            <img src="Home/Gambar.png" alt="test">        
+          </div>
+          <div class="col-8">
+            <h1 style="text-align:left; font-family:Playfair Display SC"><b><i>Who Our Client Says</i></b></h1>
+            <br>
+            <h3 style="text-align: justify; font-family:'Playfair Display'">Saya baru saja mengunjungi Rina Salon dan keseluruhan pengalaman saya sangat memuaskan. Suasana dengan staf yang ramah, dan layanan profesional menciptakan perawatan diri yang istimewa. Saya memilih perawatan rambut dan facial, dan hasilnya luar biasa. Ahli kecantikan sangat berpengetahuan, menggunakan produk berkualitas tinggi. dan memberikan saran yang berguna. Meskipun harganya di atas rata - rata, kualitas layanan membuatnya sepadan. Saya sangat merekomendasikan Rina Salon untuk pengalaman kecantikan yang memuaskan.</h3>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slideWidth = document.querySelector('.carousel-slide').offsetWidth;
+            carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + 6) % 6;
+            showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % 6;
+            showSlide(currentIndex);
+        });
+    </script>
+
+</body>
+
+</html>
