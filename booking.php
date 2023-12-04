@@ -1,3 +1,40 @@
+<?php
+// Assuming you have a MySQL database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "rinasalon";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from the database
+$sql = "SELECT jam FROM pesan";
+$result = $conn->query($sql);
+
+// Check if there are rows in the result
+if ($result->num_rows > 0) {
+    // Store the fetched data in an array
+    $jamData = array();
+    while($row = $result->fetch_assoc()) {
+        $jamData[] = $row['jam'];
+    }
+} else {
+    // If no rows are found
+    $jamData = array();
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,47 +268,65 @@
                                 <input type="date" class="container-fluid" name="tgl" id="tanggal">
                                </div>
                                 <div class="dropdown">
-                                    Pilih Jam    <!-- menu jam -->
-                                      <div class="mb-3">
+                                <?php
+                                // Assuming you have fetched data from the database and stored it in an array called $jamData
+                                $jamData = ['08:00', '09:00', '10:00']; // Replace this with your actual data
+
+                                // Function to check if a specific time is in the database
+                                function isTimeInDatabase($time, $jamData) {
+                                    return in_array($time, $jamData);
+                                }
+                                ?>Pilih Jam    <!-- menu jam -->
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="08:00">Jam 08:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="08:00" <?php echo isTimeInDatabase('08:00', $jamData) ? 'disabled' : ''; ?>>Jam 08:00
                                         </div>
-                                      <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="09:00">Jam 09:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="09:00" <?php echo isTimeInDatabase('09:00', $jamData) ? 'disabled' : ''; ?>>Jam 09:00
                                         </div>
-                                      <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="10:00">Jam 10:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="10:00" <?php echo isTimeInDatabase('10:00', $jamData) ? 'disabled' : ''; ?>>Jam 10:00
                                         </div>
-                                      <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="11:00">Jam 11:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="11:00" <?php echo isTimeInDatabase('11:00', $jamData) ? 'disabled' : ''; ?>>Jam 11:00
                                         </div>
-                                      <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="12:00">Jam 12:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="12:00" <?php echo isTimeInDatabase('12:00', $jamData) ? 'disabled' : ''; ?>>Jam 12:00
                                         </div>
-                                      <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="13:00">Jam 13:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="13:00" <?php echo isTimeInDatabase('13:00', $jamData) ? 'disabled' : ''; ?>>Jam 13:00
                                         </div>
-                                      <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="14:00">Jam 14:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="14:00" <?php echo isTimeInDatabase('14:00', $jamData) ? 'disabled' : ''; ?>>Jam 14:00
                                         </div>
-                                        <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="15:00">Jam 15:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="15:00" <?php echo isTimeInDatabase('15:00', $jamData) ? 'disabled' : ''; ?>>Jam 15:00
                                         </div>
-                                        <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="16:00">Jam 16:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="16:00" <?php echo isTimeInDatabase('16:00', $jamData) ? 'disabled' : ''; ?>>Jam 16:00
                                         </div>
-                                        <div class="mb-3">
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="form-check bg-custom1">
-                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="17:00">Jam 17:00
+                                            <input type="radio" class="form-check-input" id="dropdownCheck2" name="jam" value="17:00" <?php echo isTimeInDatabase('17:00', $jamData) ? 'disabled' : ''; ?>>Jam 17:00
                                         </div>
+                                    </div>
                                           
                                       </div>
                                     
