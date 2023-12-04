@@ -18,8 +18,9 @@ $id = $_POST['id'];
 
 // Perform the insertion into another table (replace 'other_table' with your actual table name)
 $sql = "INSERT INTO konfirm (jasa, nama, telp, tgl, jam, total, bayar) SELECT jasa, nama, telp, tgl, jam, total, bayar FROM pesan WHERE id = $id";
+$sql2 = "DELETE FROM pesan WHERE id = $id";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($sql) === TRUE && $conn->query($sql2) === TRUE) {
     echo "Data inserted successfully into other table";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

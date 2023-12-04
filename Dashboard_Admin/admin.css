@@ -1,0 +1,21 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust as needed */
+}
+
+.table-wrapper {
+  width: 80%; /* Adjust the width of the table wrapper */
+}
+
+table {
+  width: 100%;
+}
+
+body {
+  background-image: url('../Home/Background.png');
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Fixed background */
+}
