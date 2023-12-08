@@ -57,7 +57,7 @@ $conn->close();
             background-color: #73BEB7;
         }
         .bg-background {
-            background-image: url('Home/Background.png');
+            background-image: url('Asset/Home/Background.png');
             /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
             background-size: cover;
             /* Sesuaikan dengan kebutuhan Anda */
@@ -331,6 +331,29 @@ $conn->close();
                                       </div>
                                     
                                   </div>
+                                  <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Total Biaya</label>
+                                <input type="text" class="form-control" id="total" placeholder="" name="total">
+                                <!-- Add this input field for storing the total value -->
+                                <input type="hidden" id="totalInput" name="totalInput">
+                            </div>
+
+                            <!-- btn pembayaran -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="bayar" value="tunai" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Tunai                                
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="bayar" value="non tunai" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Non - Tunai                                
+                                </label>
+                            </div>
+                            <div class="btn-container text-end">
+                                    <button type="submit" value="submit" class="btn bg-custom2">Pesan</button>
+                                </div>
                             </div>
                             <!-- total biaya -->
 
@@ -370,39 +393,6 @@ $conn->close();
                                 });
                             </script>
 
-
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Total Biaya</label>
-                                <input type="text" class="form-control" id="total" placeholder="" name="total">
-                                <!-- Add this input field for storing the total value -->
-                                <input type="hidden" id="totalInput" name="totalInput">
-                            </div>
-
-                            <!-- btn pembayaran -->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="bayar" value="tunai" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Tunai                                
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="bayar" value="non tunai" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Non - Tunai                                
-                                </label>
-                            </div>
-                    <!-- Upload -->
-                            <div class="file-upload">
-                            <div class="file-select">
-                                <div class="file-select-button" id="fileName">Upload Bukti Pembayaran</div>
-                                <div class="file-select-name" id="noFile"></div>
-                                <input type="file" name="chooseFile" id="chooseFile">
-                            </div>
-                            </div>
-                            <!-- btn pesan -->
-                                <div class="btn-container text-end">
-                                    <button type="submit" value="submit" class="btn bg-custom2">Pesan</button>
-                                </div>
                             
                             <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
                         </div>

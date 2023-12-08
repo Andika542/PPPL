@@ -29,22 +29,36 @@
         }
         /* Contoh warna 2 */
         
+        .bg-wa {
+            background-image: url('Asset//Home/wa.png');
+            /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+            background-size: cover;
+            /* Sesuaikan dengan kebutuhan Anda */
+            background-repeat: no-repeat;
+            /* Sesuaikan dengan kebutuhan Anda */
+            height: 65px;
+            width: 220px;
+        }
+
         .bg-background {
-            background-image: url('Home/Background.png');
+            background-image: url('Asset/Home/Background.png');
             /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
             background-size: cover;
             /* Sesuaikan dengan kebutuhan Anda */
             background-repeat: no-repeat;
             /* Sesuaikan dengan kebutuhan Anda */
         }
-        
+
         .bg-backgroundj {
-            background-image: url('Asset/Background.png');
+            background-image: url('Asset/Jasa/Background.png');
             /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
             background-size: cover;
             /* Sesuaikan dengan kebutuhan Anda */
             background-repeat: no-repeat;
             /* Sesuaikan dengan kebutuhan Anda */
+        }
+        .btn-container{
+        padding-bottom: 100px;
         }
         /* Tambahkan warna-warna lain sesuai kebutuhan */
     </style>
@@ -55,24 +69,24 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-custom1 sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="Logo/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Rina Salon
+            <a class="navbar-brand" style="font-size:29px; font-family:Playfair Display SC;" href="#">
+                <img src="Asset/Logo/Logo.png" alt="Logo" width="90" height="64" class="d-inline-block align-text-top" style="padding-right:30px;"><i>Rina Salon</i>
             </a>
 
             <nav id="navbar-example2" class="navbar bg-custom1 px-3 mb-3">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a class="nav-link" href="#scrollspyHeading1" style="border-right: 2px;
-                        border-color: black;">Home</a>
+                        border-color: black;">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#scrollspyHeading2">Jasa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="booking.html">Booking</a>
+                        <a class="nav-link" href="booking.php">Pemesanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading4">Review</a>
+                        <a class="nav-link" href="#scrollspyHeading4">Ulasan</a>
                     </li>
                 </ul>
             </nav>
@@ -81,37 +95,40 @@
     <!-- Home -->
     <div class="inner-container-home" id="scrollspyHeading1">
         <div class="image-home">
-            <img src="Home/Gambar.png" width="80%">
+            <img src="Asset/Home/Gambar.png" width="80%">
         </div>
         <div class="home-deskripsi">
-            <h1 style="text-align:left; font-family:Playfair Display SC"><b><i>Care Of 
+            <h1 style="text-align:left; font-family:Playfair Display SC;"><b><i>Care Of 
                 <br>Your Hair</i></b></h1>
               <br>
               <h3 style="text-align: justify; font-family:'Playfair Display'">Rina Salon adalah destinasi salon kecantikan yang menggabungkan kenyamanan, dan profesionalisme untuk memberikan pengalaman yang tak terlupakan kepada setiap pelanggan. </h3>  
         </div>
+        <div class="contbtn">
+            <button type="submit" value="submit" class="btn bg-wa sticky-bottom-right"></button>
+        </div>
     </div>
 
     <!-- Jasa -->
-    <div class="container-jasa" id="scrollspyHeading2">
+    <div class="container-jasa bg-backgroundj" id="scrollspyHeading2">
         <div id="carousel-container">
-            <p style="color: white; font-size: 70px; text-align: center; padding-bottom: 50px;margin-bottom: 10px;">Jasa</p>
+            <p style="color: white; font-size: 70px; text-align: center; padding-bottom: 50px;margin-bottom: 10px; font-family:Playfair Display SC;"><i>Jasa</i></p>
             <div id="carousel">
-                <div class="carousel-slide" style="width: 30%; height: 550px; background-image: url('Asset/BleachHighlight.jpg'); background-color: black; border-radius: 300px 300px 0px 0px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
-                    <p style="color: white;">Bleach, Highlight</p>
+                <div class="carousel-slide" style="width: 30%; height: 550px; background-image: url('Asset/Jasa/BleachHighlight.jpg'); background-color: black; border-radius: 300px 300px 0px 0px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                    <p style="color: white; font-family:Playfair Display SC">Bleach, Highlight</p>
                 </div>
-                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Blowbiasa.jpg'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Jasa/Blowbiasa.jpg'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
                     <p style="color: white;">Blow</p>
                 </div>
-                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Catwarnahitam.jpg'); border-radius: 300px 300px 0px 0px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Jasa/Catwarnahitam.jpg'); border-radius: 300px 300px 0px 0px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
                     <p style="color: white;">Cat Warna</p>
                 </div>
-                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Gunting\ +\ Cuci.png'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Jasa/Gunting\ +\ Cuci.png'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
                     <p style="color: white;">Gunting + Cuci</p>
                 </div>
-                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Nail\ Polish.jpg'); border-radius: 300px 300px 0px 0px ; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Jasa/Nail\ Polish.jpg'); border-radius: 300px 300px 0px 0px ; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
                     <p style="color: white;">Nail Polish</p>
                 </div>
-                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Smoothing.jpg'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
+                <div class="carousel-slide" style="width: 200px; height: 550px; background-image: url('Asset/Jasa/Smoothing.jpg'); border-radius: 0px 0px 300px 300px; background-size: cover; background-repeat: no-repeat; display: flex; align-items: end; justify-content: center;">
                     <p style="color: white;">Smoothing</p>
                 </div>
             </div>
@@ -120,11 +137,11 @@
         </div>
     </div>
     <!-- review -->
-    <h4 id="scrollspyHeading4">Review</h4>
+    <div class="inner-container-rev" id="scrollspyHeading4">
     <div class="container-fluid bg-background">
         <div class="row align-items-center">
           <div class="col-4">
-            <img src="Home/Gambar.png" alt="test">        
+            <img src="Asset/Home/Gambar.png" alt="test">        
           </div>
           <div class="col-8">
             <h1 style="text-align:left; font-family:Playfair Display SC"><b><i>Who Our Client Says</i></b></h1>
