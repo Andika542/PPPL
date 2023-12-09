@@ -44,9 +44,6 @@
     justify-content: center;
     align-items: center;
     padding: 100px;
-    /* background-image: url(Asset/Jasa/Background.png);
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 .carousel {
     position: relative;
@@ -76,34 +73,33 @@
     flex: 0 0 33.33%;
     margin-right: 20px;
   }
-
-
-
   .carousel-slide p {
     font-size: 25px;
   }
-
-  #prev, #next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 50%;
-  }
-
-  #prev {
-    left: 10px;
-  }
-
+  #prev,
   #next {
-    
-    right: 90px;
+    background-color: #3fa46a;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #333;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 50%;
   }
+
+ 
+#prev {
+  left: 10px;
+  font-size: 24px; /* Ubah nilai ini sesuai dengan keinginan Anda */
+}
+
+#next {
+  right: 90px;
+  font-size: 24px; /* Ubah nilai ini sesuai dengan keinginan Anda */
+}
   /****** IGNORE ******/
 /* body { 
   width: 400px;

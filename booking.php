@@ -86,11 +86,13 @@ $conn->close();
 
 
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
 <body class="bg-background">
     <form action="insert.php" method="post" enctype="multipart/form-data">
-    <div class="container text-center">
-        <h1>Booking</h1>
+    <div class="container text-center" style="font-family:Playfair Display SC">
+        <h1>Pemesanan</h1>
     </div>
     <div class="container px-4">
         <div class="row gx-5">
@@ -333,9 +335,9 @@ $conn->close();
                                   </div>
                                   <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Total Biaya</label>
-                                <input type="text" class="form-control" id="total" placeholder="" name="total">
+                                <input type="text" class="form-control" id="total" placeholder="" name="totalInput">
                                 <!-- Add this input field for storing the total value -->
-                                <input type="hidden" id="totalInput" name="totalInput">
+                                <!-- <input type="text" id="totalInput" name="totalInput"> -->
                             </div>
 
                             <!-- btn pembayaran -->
@@ -346,8 +348,8 @@ $conn->close();
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="bayar" value="non tunai" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="radio" name="bayar" value="non tunai" id="flexCheckDefault1">
+                                <label class="form-check-label" for="flexCheckDefault1">
                                     Non - Tunai                                
                                 </label>
                             </div>
@@ -364,7 +366,7 @@ $conn->close();
 
                                     // Get the textarea and set it to readonly
                                     const totalTextArea = document.getElementById('total');
-                                    totalTextArea.setAttribute('readonly', 'readonly');
+                                    // totalTextArea.setAttribute('readonly', 'readonly');
 
                                     // Add event listener to each checkbox
                                     checkboxes.forEach(function (checkbox) {
@@ -382,7 +384,7 @@ $conn->close();
                                             }
                                         });
 
-                                        totalTextArea.value = `Rp${total.toLocaleString('id-ID')}`;
+                                        totalTextArea.value = `${total.toLocaleString('id-ID')}`;
                                     }
                                     const totalInput = document.getElementById('totalInput');
                                     if (totalInput) {

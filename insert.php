@@ -13,20 +13,20 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // $name = $_POST['name'];
-    // $telp = $_POST['telp'];
-    // $tgl = $_POST['tgl'];
-    // $jam = $_POST['jam'];
-    // $bayar = $_POST['bayar'];
+    $name = $_POST['name'];
+    $telp = $_POST['telp'];
+    $tgl = $_POST['tgl'];
+    $jam = $_POST['jam'];
+    $bayar = $_POST['bayar'];
     // $upload = $_POST['chooseFile'];
     $total = $_POST['totalInput'];
 
-    // // Check if interests array is set
-    // if (isset($_POST['jasa']) && is_array($_POST['jasa'])) {
-    //     $jasa = implode(', ', $_POST['jasa']);
-    // } else {
-    //     $jasa = "";
-    // }
+    // Check if interests array is set
+    if (isset($_POST['jasa']) && is_array($_POST['jasa'])) {
+        $jasa = implode(', ', $_POST['jasa']);
+    } else {
+        $jasa = "";
+    }
 
     // echo $name;
     // echo $telp;
@@ -35,16 +35,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // echo $total;
     // echo $bayar;
     // echo $jasa;
-    echo "Total".$total;
+    // echo "Total".$total;
 
-    // //Insert data into the database
-    // $sql = "INSERT INTO pesan (jasa, nama, telp, tgl, jam, total, bayar, upload) VALUES ('$jasa', '$name', '$telp', '$tgl', '$jam', '$total', '$bayar', '$upload')";
+    //Insert data into the database
+    $sql = "INSERT INTO pesan (jasa, nama, telp, tgl, jam, total, bayar) VALUES ('$jasa', '$name', '$telp', '$tgl', '$jam', '$total', '$bayar')";
 
-    // if ($conn->query($sql) === TRUE) {
-    //     echo "Data inserted successfully";
-    // } else {
-    //     echo "Error: " . $sql . "<br>" . $conn->error;
-    // }
+    if ($conn->query($sql) === TRUE) {
+        // sleep(5);
+        header("Location: booking_success.html");
+       
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    header("refresh:5;location=index.html");
+
 }
 
 $conn->close();

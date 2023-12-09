@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styleAdmin.css" />
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet" />
+</head>
+
+<body>
+    <div style="display: flex; align-items: center;">
+    <img src="../Asset/Logo/Logo.png" alt="hai" width="60px" height="60px" style="margin-right: 10px;" />
+    <h3 style="
+        font-family: 'playfair-display', serif;
+        font-weight: 500;
+        font-style: italic;
+        margin: 0;
+    ">
+        RINA SALON
+    </h3>
+</div>
+<nav>
+    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Pelanggan</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Konfirmasi</button>
+    </div>
+</nav>
+
+
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                    <div class="tablePelanggan table table-bordered border-primary" style="margin-top: 100px; align-items: center;">
+                        <h2>List Pelanggan</h2>
+                        <table class="table table-bordered" style="margin-top: 50px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col-1">No</th>
+                                    <th scope="col-1">Nama</th>
+                                    <th scope="col-1">No Telepon</th>
+                                    <th scope="col-1">Waktu dan Tanggal</th>
+                                    <th scope="col-1">Jasa</th>
+                                    <th scope="col-1">Total Biaya</th>
+                                    <th scope="col-1">Metode Pembayaran</th>
+                                    <th scope="col-1">Bukti Pembayaran</th>
+                                    <th scope="col-1">Button</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Nama</td>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                    <td>Total Biaya</td>
+                                    <td>Metode Pembayaran</td>
+                                    <td>Bukti Pembayaran</td>
+                                    <td>
+                                        <input class="btn btn-primary" type="button" value="Konfirmasi" />
+                                        <input class="btn btn-danger" type="button" value="Hapus" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Nama</td>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                    <td>Total Biaya</td>
+                                    <td>Metode Pembayaran</td>
+                                    <td>Bukti Pembayaran</td>
+                                    <td>
+                                        <input class="btn btn-primary" type="button" value="Konfirmasi" />
+                                        <input class="btn btn-danger" type="button" value="Hapus" />
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Nama</td>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                    <td>Total Biaya</td>
+                                    <td>Metode Pembayaran</td>
+                                    <td>Bukti Pembayaran</td>
+                                    <td>
+                                        <input class="btn btn-primary" type="button" value="Konfirmasi" />
+                                        <input class="btn btn-danger" type="button" value="Hapus" />
+                                    </td>
+
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Nama</td>
+                                        <td>No Telp</td>
+                                        <td>Waktu dan Tanggal</td>
+                                        <td>Jasa</td>
+                                        <td>Total Biaya</td>
+                                        <td>Metode Pembayaran</td>
+                                        <td>Bukti Pembayaran</td>
+                                        <td>
+                                            <input class="btn btn-primary" type="button" value="Konfirmasi" />
+                                            <input class="btn btn-danger" type="button" value="Hapus" />
+                                        </td>
+
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Nama</td>
+                                            <td>No Telp</td>
+                                            <td>Waktu dan Tanggal</td>
+                                            <td>Jasa</td>
+                                            <td>Total Biaya</td>
+                                            <td>Metode Pembayaran</td>
+                                            <td>Bukti Pembayaran</td>
+                                            <td>
+                                                <input class="btn btn-primary" type="button" value="Konfirmasi" />
+                                                <input class="btn btn-danger" type="button" value="Hapus" />
+                                            </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                    <div class="tablePelanggan table table-bordered border-primary" style="margin: 100px auto; margin-top: 100px;">
+                        <h2 style="text-align: center;">Konfirmasi</h2>
+                        <table class="table table-bordered" style="margin-top: 50px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">No.Telp</th>
+                                    <th scope="col">Waktu dan Tanggal</th>
+                                    <th scope="col">Jasa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>No Telp</td>
+                                    <td>Waktu dan Tanggal</td>
+                                    <td>Jasa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                </li>
+        </ul>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

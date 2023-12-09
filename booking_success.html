@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- CATATAN
+    1. PENAMAAN FILE HOMEPAGE (HALAMAN UTAMA) HARUS "INDEX.HTML"
+    2. JANGAN TARO CODE JS ATAU HTML DI FILE css
+    3. SELAIN HALAMAN HOMEPAGE LU BISA BEBAS NAMAIN SEPERTI : "contact.html, about.html DLL" -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- UNTUK OMAN DAN ADIB PENAMAAN CSS DIBAWAH INI HARUS SAMA KAYAK FILE CSS YG LU PUNYA  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- UNTUK OMAN DAN ADIB PENAMAAN CSS DIBAWAH INI HARUS SAMA KAYAK FILE CSS YG LU PUNYA karna kalau namanya beda nanti file css nya ga kepanggil  -->
+
+    <style>
+        .bg-custom1 {
+            background-color: #FFC1CF;
+        }
+        /* Contoh warna 1 */
+        
+        .bg-custom2 {
+            background-color: #73BEB7;
+        }
+        /* Contoh warna 2 */
+        
+        .bg-wa {
+            background-image: url('Asset//Home/wa.png');
+            /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+            background-size: cover;
+            /* Sesuaikan dengan kebutuhan Anda */
+            background-repeat: no-repeat;
+            /* Sesuaikan dengan kebutuhan Anda */
+            height: 65px;
+            width: 220px;
+        }
+
+        .bg-background {
+            background-image: url('Asset/Home/Background.png');
+            /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+            background-size: cover;
+            /* Sesuaikan dengan kebutuhan Anda */
+            background-repeat: no-repeat;
+            /* Sesuaikan dengan kebutuhan Anda */
+        }
+
+        .bg-backgroundj {
+            background-image: url('Asset/Jasa/Background.png');
+            /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+            background-size: cover;
+            /* Sesuaikan dengan kebutuhan Anda */
+            background-repeat: no-repeat;
+            /* Sesuaikan dengan kebutuhan Anda */
+        }
+        .btn-container{
+        padding-bottom: 100px;
+        }
+        /* Tambahkan warna-warna lain sesuai kebutuhan */
+    </style>
+
+    <style>
+        body {
+            background-color: #f4f4f4; /* Warna latar belakang yang diinginkan */
+            background-image: url('Asset/Home/Background.png'); /* Gambar latar belakang yang diinginkan */
+            background-size: cover; /* Sesuaikan kebutuhan Anda */
+            background-repeat: no-repeat; /* Sesuaikan kebutuhan Anda */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        div {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        #countdown {
+            font-size: 24px;
+            color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <!-- Home -->
+
+    <div style="font-family: Playfair Display SC;">
+        <h1>Pemesanan berhasil</h1>
+        <p>Pesanan anda selanjutnya akan dikonfirmasi oleh admin kami, <br>mohon ditunggu untuk konfirmasi melalui Whatsapp oleh admin kami.</br><br>Terima Kasih</br></p>
+        <div id="countdown">10</div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        // Countdown function
+        function startCountdown() {
+            var seconds = 10;
+            var countdownElement = document.getElementById('countdown');
+    
+            function updateCountdown() {
+                countdownElement.textContent = seconds;
+                seconds--;
+    
+                if (seconds < 0) {
+                    clearInterval(interval);
+                    countdownElement.style.display = 'none';
+                }
+            }
+    
+            // Update countdown every second
+            var interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to display the starting value
+    
+            // You can add additional actions or redirect the user when the countdown reaches zero
+        }
+    
+        // Start the countdown when the page loads
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
+    <script>
+        // Add this script at the end of your body content
+
+        // Function to redirect after a delay
+        function redirectToIndex() {
+            // Wait for 5 seconds (5000 milliseconds) and then redirect
+            setTimeout(function () {
+                window.location.href = 'index.html';
+            }, 10000);
+        }
+
+        // Call the function when the page is loaded
+        window.onload = redirectToIndex;
+    </script>
+    <script>
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slideWidth = document.querySelector('.carousel-slide').offsetWidth;
+            carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + 6) % 6;
+            showSlide(currentIndex);
+        });
+
+        next
